@@ -24,7 +24,7 @@ Public Class USBUtil
     ''' </summary>
     ''' <param name="elPath">Path completo del que se extraerá la letra de unidad.</param>
     ''' <returns></returns>
-    Public Shared Function EsUnidadExterna(ByVal elPath As String) As Boolean
+    Public Shared Function EsUnidadExterna(elPath As String) As Boolean
         Dim disco = Path.GetPathRoot(Path.GetFullPath(elPath))
         Dim usbD = GetUsbDriveLetters()
         Return usbD.Contains(disco)
